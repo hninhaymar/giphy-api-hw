@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Giphy API Homework</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style type="text/css">
+    button,
+    div,
+    form,
+    input {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="buttons-view"></div>
+
+    <form id="topic-form">
+        <label for="topic-input">Add a topic (ex: disney character)</label><br> 
+        <input type="text" id="topic-input"><br>
+    
+        <!-- Button triggers new movie to be added -->
+        <input id="add-topic" type="submit" class="btn btn-outline-info btn-sm bg-info text-white" value="Add a topic">
+    </form>
+     
+    <div id="gifs-view"></div>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  
+</body>
+
+</html>
