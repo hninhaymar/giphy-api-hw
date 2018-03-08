@@ -17,7 +17,7 @@ function displayDisneyInfo(){
         $("#gifs-view").empty();
         var gifs = result.data;
         gifs.forEach(function(g){
-            var container = $('<div>');
+            var container = $("<div class='float-left'>");
             var rating = $('<p>').append("Rating: " + g.rating);
             var img = $("<img>");
             var img_still = g.images.fixed_height_still.url;
@@ -61,9 +61,11 @@ $("#add-topic").on("click", function(event) {
     event.preventDefault();
     // This line of code will grab the input from the textbox
     var topic = $("#topic-input").val().trim();
-
-    topics.push(topic);
-    renderButtons();
+    if(topic !== ""){
+        topics.push(topic);
+        renderButtons();
+        $("#topic-input").val("");
+    }
   });
 
   // Adding click event listeners to all elements with a class of "disney"

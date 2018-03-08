@@ -12,22 +12,32 @@
     input {
       margin: 10px;
     }
+
+    #gifs-view{
+        display: inline;
+    }
   </style>
 </head>
 
 <body>
-  <div id="container">
-    <div id="buttons-view"></div>
-
-    <form id="topic-form">
-        <label for="topic-input">Add a topic (ex: disney character)</label><br> 
-        <input type="text" id="topic-input"><br>
+  <div id="container">    
+    <div class="row">
+        <div class="col-7">
+            <div id="buttons-view"></div>
+        </div>
+        <div class="col-4">
+            <form id="topic-form" class='float-right'>
+                <label for="topic-input">Add a topic (ex: disney character)</label><br> 
+                <input type="text" id="topic-input"><br>
+            
+                <!-- Button triggers new movie to be added -->
+                <input id="add-topic" type="submit" class="btn btn-outline-info btn-sm bg-info text-white" value="Add a topic">
+            </form>
+        </div>
+        
+    </div>
     
-        <!-- Button triggers new movie to be added -->
-        <input id="add-topic" type="submit" class="btn btn-outline-info btn-sm bg-info text-white" value="Add a topic">
-    </form>
-     
-    <div id="gifs-view"></div>
+    <div id="gifs-view" class="row"></div>
 
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
