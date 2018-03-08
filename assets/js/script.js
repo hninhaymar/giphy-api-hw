@@ -42,6 +42,10 @@ function renderButtons() {
 
     $("#buttons-view").empty();
     // Loops through the array of topics
+    var localStorageTopics = localStorage.getItem("topics");
+    if(localStorageTopics != null){
+        topics = localStorageTopics.split(",");
+    }
     for (var i = 0; i < topics.length; i++) {
 
       // Then dynamicaly generates buttons for each movie in the array
@@ -63,6 +67,8 @@ $("#add-topic").on("click", function(event) {
     var topic = $("#topic-input").val().trim();
     if(topic !== ""){
         topics.push(topic);
+        localStorage.clear();
+        localStorage.setItem("topics",topics);
         renderButtons();
         $("#topic-input").val("");
     }
